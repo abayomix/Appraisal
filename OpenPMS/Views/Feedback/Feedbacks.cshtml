@@ -1,0 +1,67 @@
+﻿@model Repo_PMS.Models.VMFeedbacks
+
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Feedbacks</title>
+</head>
+<body>
+
+<h4>VMFeedbacks</h4>
+<hr />
+<div class="container justify-content-center col-6">
+    
+    
+
+        
+        @if(Model.reviews !=null)
+        
+        {
+
+                foreach(var item in Model.reviews)
+                {
+                <form method="get" asp-action="GetReportees">
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                             <h5 class="card-title">@item.ReviewName</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@item.ReviewCategory For Year @item.ReviewYear</h6>
+                            <p class="card-text">@item.review_Description</p>
+                            
+                            <input type="hidden" name="ReviewName" value="@item.ReviewName"/>
+                            <input type="hidden" name="MGREmpID" value="@HttpContextAccessor?.HttpContext?.Session?.GetString("EmpID")?.ToString()"/>
+
+                            <input type="submit" class="btn btn-primary" value="Provoide Feedback"/>
+                            
+                      
+                        </div>
+                    </div>
+                </div>
+
+                </form>
+
+
+            }
+
+
+
+
+
+        }
+        else
+        {
+            <p>No Records</p>
+        }
+
+   
+</div>
+
+
+</body>
+</html>

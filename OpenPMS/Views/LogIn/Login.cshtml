@@ -1,0 +1,68 @@
+﻿@model Repo_PMS.Models.Login
+
+@{
+    Layout = null;
+}
+
+@if (TempData.ContainsKey("Message"))
+{
+    <script type="text/javascript">
+        alert('@TempData["Message"]');
+  </script>
+}
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+ 
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+  <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+    
+
+<div class="container col-4 justify-content-center">
+    <div class="justify-content-center">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <h4 class="text-center">Login</h4>
+                <hr />
+
+
+            <div class="form-group m-4">
+                <label asp-for="UserID" class="control-label"></label>
+                <input asp-for="UserID" class="form-control" />
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+            <div class="form-group m-4">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group m-4">
+                <input type="submit" value="Self LogIn" name="Btn_click" class="btn btn-primary" />
+                @*<input type="submit" value="FB Login" name="Btn_click" class="btn btn-primary" />*@
+            @*<input type="submit" value="API Login" name="Btn_click" class="btn btn-primary" />*@
+           
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

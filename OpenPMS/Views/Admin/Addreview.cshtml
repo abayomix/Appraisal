@@ -1,0 +1,164 @@
+﻿@model Repo_PMS.Models.VMReview
+
+ 
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Addreview</title>
+</head>
+<body>
+
+    <h4>Review</h4>
+    <hr />
+    <div class="container justify-content-center">
+        <div class="col-md-4">
+            <form asp-action="Addreview">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="review.ReviewName" class="control-label"></label>
+                    <input asp-for="review.ReviewName" class="form-control" />
+                    <span asp-validation-for="review.ReviewName" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group">
+
+                    @{
+                        var years = new List<SelectListItem>
+                    {
+                    new SelectListItem{Text="2023",Value="2023"}
+                    ,new SelectListItem{Text="2024",Value="2024"}
+                    ,new SelectListItem{Text="2025",Value="2025"}
+                    ,new SelectListItem{Text="2026",Value="2026"}
+                    ,new SelectListItem{Text="2027",Value="2027"}
+                    ,new SelectListItem{Text="2028",Value="2028"}
+                    ,new SelectListItem{Text="2029",Value="2029"}
+                    ,new SelectListItem{Text="2030",Value="2030"}
+                    ,new SelectListItem{Text="2031",Value="2031"}
+
+                    };
+                    }
+                    <label asp-for="review.ReviewYear" class="control-label"></label>
+                    <select class="control-select" asp-for="review.ReviewYear" asp-items="years"></select>
+
+                    <span asp-validation-for="review.ReviewYear" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label asp-for="review.review_Description" class="control-label"></label>
+                    <input asp-for="review.review_Description" class="form-control" />
+                    <span asp-validation-for="review.review_Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+
+                    @{
+                        var reviewcategories = new List<SelectListItem>
+                    {
+                    new SelectListItem{Text="Mid Year",Value="Mid Year"}
+                    ,new SelectListItem{Text="Anual",Value="Anual"}
+
+                    };
+                    }
+                    <label asp-for="review.ReviewCategory" class="control-label"></label>
+                    <select class="control-select" asp-for="review.ReviewCategory" asp-items="reviewcategories"></select>
+
+                    <span asp-validation-for="review.ReviewCategory" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                       
+                        <input  class="form-check-input" asp-for="review.IsActive" /> @Html.DisplayNameFor(model => model.review.IsActive)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <H1>Current Review</H1>
+
+        <table border="1">
+
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.review.Id)</th>
+                <th>@Html.DisplayNameFor(Model => Model.review.ReviewName)</th>
+                <th>@Html.DisplayNameFor(Model => Model.review.review_Description)</th>
+                <th>@Html.DisplayNameFor(Model => Model.review.ReviewYear)</th>
+                <th>@Html.DisplayNameFor(Model => Model.review.IsActive)</th>
+                <th>@Html.DisplayNameFor(Model => Model.review.ReviewCategory)</th>
+                <th>@Html.Display("Operations")</th>
+            </tr>
+
+            @{
+                if (@Model.lstReviews != null)
+                {
+
+                    foreach (var item in Model.lstReviews)
+                    {
+                        <tr>
+
+
+                            @{
+                                string ad;
+                                string Action;
+                                if (item.IsActive == false)
+                                {
+                                    ad = "Activate";
+                                    Action = "actdeactreview";
+                                }
+                                else
+                                {
+                                    ad = "Deactivate";
+                                    Action = "actdeactreview";
+                                }
+
+
+                            }
+
+                            <td>@item.Id</td>
+                            <td>@item.ReviewName</td>
+                            <td>@item.review_Description</td>
+                            <td>@item.ReviewYear</td>
+                            <td>@item.IsActive</td>
+                            <td>@item.ReviewCategory</td>
+                            <td>
+
+                                @Html.ActionLink("Edit","EditReview",new{id=item.Id}) |
+                                @Html.ActionLink("Delete","deletereview",new{id=item.Id}) |
+                                @Html.ActionLink(ad,Action,new{id=item.Id})
+
+                            </td>
+
+                        </tr>
+
+                    }
+
+
+
+                }
+
+            }
+
+        </table>
+
+
+
+    </div>
+
+</body>
+</html>

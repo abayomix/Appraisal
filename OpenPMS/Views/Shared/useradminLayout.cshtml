@@ -1,0 +1,131 @@
+﻿@using static HttpContext
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+@if (TempData.ContainsKey("Message"))
+
+
+{
+    <script type="text/javascript">
+        alert('@TempData["Message"]');
+    </script>
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+    <link href="~/css/mycss.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+
+
+
+    <div class="main-container d-flex">
+
+        <div class="sidebar" id="side_nav">
+
+
+            <div class="header-box px-2 pt-3 pb-4">
+
+                <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2 me-2">OPMS</span> <span class="text-white"> Open PMS</span>  </h1>
+                <button class="btn d-md-none d-block close-btn px-1 py-0 text-white "><i class="fal fa-stream"></i></button>
+
+
+                <ul class="list-unstyled px-2">
+
+                    <li class="active"> @Html.ActionLink("Dashboard","USerRedirection","LogIn",null,new{@class ="text-decoration-none px-3 py-2 d-block fa-light fa-house"})</li>
+
+                    @{
+                        string? role = HttpContextAccessor?.HttpContext?.Session?.GetString("URole")?.ToString();
+                        if (role == "HR" || role == "Admin")
+                        {
+                            <li class=""> @Html.ActionLink("Add User","CreateUser","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li> //fa-regular fa-user
+                            <li class=""> @Html.ActionLink("Add Role","AddRole","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li>//fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Add Deparment","addDept","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block  "})</li>//fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Add Degination","AddDegination","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li>//fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Add Assesment","AddAssesment","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li>//fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Add Review","Addreview","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li> //fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Add Assesment Question","AddQuestion","Assesment",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li>//fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("View Assesment Questions","ViewAllQuestions","Assesment",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li> //fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("View /ADD Feedback Questions","AddFeedbackQuestion","Feedback",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li>//fa-sharp fa-solid fa-circle-user
+                          //fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Set Assement Questions","setassementQuestion","Assesment",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li> //fa-sharp fa-solid fa-circle-user
+                            <li class=""> @Html.ActionLink("Score Board","ViewScore","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li> //fa-sharp fa-solid fa-circle-user
+
+                            //<li class=""> @Html.ActionLink("Add Review","Addreview","Admin",null,new{@class ="text-decoration-none px-3 py-2 d-block fa-sharp fa-solid fa-circle-user"})</li>
+
+
+                        }
+
+
+                    }
+
+                       <li class=""> @Html.ActionLink("Feedbacks","Feedbacks","Feedback",null,new{@class ="text-decoration-none px-3 py-2 d-block "})</li>
+                    <li class=""> @Html.ActionLink("Take Assesment","Assesments","Assesment",null,new{@class ="text-decoration-none px-3 py-2 d-block fa-sharp fa-solid fa-circle-user"})</li>
+
+                    <li class=""> @Html.ActionLink("Change Password","ChangePassword","LogIn",null,new{@class ="text-decoration-none px-3 py-2 d-block fa-solid fa-key"})</li>
+                    <li class=""> @Html.ActionLink("LogOut","Logout","LogIn",null,new{@class ="text-decoration-none px-3 py-2 d-block fa-sharp fa-solid fa-arrow-right-from-bracket fa-fade"})</li>
+
+
+                </ul>
+
+                <hr class="h-color mx-2" />
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="content justify-content-center" id="side-nav">
+
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        $(".sidebar ul li ").on('click', function() {
+
+            $(".sidebar ul li.active").removeClass('active');
+            $(this).addClass('active');
+
+
+
+
+        })
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿@model Repo_PMS.Models.VMfeedbackList
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RecordFeedback</title>
+</head>
+<body>
+
+ @if (Model.lstfbQuestion != null)
+            { 
+                
+                
+               
+
+                 <form method="post" asp-action="savefeedback">
+
+                      <input type="hidden" asp-for="reviewname"value="@Model.reviewname"/>
+                      <input type="hidden" asp-for="mgrEmpID" value="@Model.mgrEmpID"/>
+
+
+                            <div class="row border border-primary m-2 p-2">
+                                <div class="col-3 text-start text-danger fs-5"><label asp-for="@Model.EmpID"></label></div>
+                                <div class="col-3 text-start text-primary fs-5">@Html.DisplayTextFor(m=>m.EmpID)</div>
+                                <div class="col-3 text-start text-danger fs-5"><label asp-for="@Model.EmpName"></label></div>
+                                <div class="col-3 text-start text-primary fs-5">@Html.DisplayTextFor(m=>m.EmpName)</div>
+                                <div class="col-3 text-start text-danger fs-5"><label asp-for="@Model.mgrEmpID"></label></div>
+                                <div class="col-3 text-start text-primary fs-5">@Html.DisplayTextFor(m=>m.mgrEmpID)</div>
+                            </div>
+
+                            <div class="row border border-primary m-2 p-2">
+                                <table class="table table-responsive table-hover table-bordered border-primary m-2 p-1 justify-content-center">
+
+                                    <tr>
+
+                                        <td class="text-danger fs-4 fw-bold">Feedback Question</td>
+                                        <td class="text-primary fs-4 fw-bold"> Score(Out of 10)</td>
+
+                                    </tr>
+
+                                    @{
+                                        int indexer = 0;
+
+                                        var lstscore = new List<SelectListItem>{
+
+                                new SelectListItem{Value="1",Text="1"},
+                                new SelectListItem{Value="2",Text="2"},
+                                new SelectListItem{Value="3",Text="3"},
+                                new SelectListItem{Value="4",Text="4"},
+                                new SelectListItem{Value="5",Text="5"},
+                                new SelectListItem{Value="6",Text="6"},
+                                new SelectListItem{Value="7",Text="7"},
+                                new SelectListItem{Value="8",Text="8"},
+                                new SelectListItem{Value="9",Text="9"},
+                                new SelectListItem{Value="10",Text="10"}
+
+
+
+
+                                };
+
+                                        foreach (var item in Model.lstfbQuestion)
+                                        {
+
+                                            <tr>
+                                                <input type="hidden" asp-for="@Model.lstfeedback[indexer].empid" value="@Model.EmpID">
+                                                <input type="hidden" asp-for="@Model.lstfeedback[indexer].CreatedBY" value="@Model.mgrEmpID">
+                                                <td> @item.Question </td>
+                                                <input type="hidden" asp-for="@Model.lstfeedback[indexer].FQID" value="@item.Id">
+                                                <td> <select asp-for="@Model.lstfeedback[indexer].score" asp-items="lstscore"></select> </td>
+
+
+
+                                            </tr>
+
+
+
+                                            indexer++;
+
+                                        }
+
+
+
+
+                                    }
+
+                                </table>
+                            </div>
+              
+                      <input type="Submit" name="Give FeedBack" value="Submit Feedback"/> 
+                    </form>
+                      
+
+
+
+
+
+                }
+
+
+</body>
+</html>

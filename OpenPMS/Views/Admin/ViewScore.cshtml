@@ -1,0 +1,102 @@
+﻿@model Repo_PMS.Models.VMScoreboard
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ScoreBoard</title>
+</head>
+<body>
+
+  <div class="container  border border-primary col-8 m-2 p-2 align-self-center">
+
+        <form method="post" asp-action="ViewScore">
+
+            @{
+                var year = new List<SelectListItem>
+                {
+                    new SelectListItem{ Text="2023",Value="2023"},
+                    new SelectListItem{ Text="2023",Value="2024"},
+                    new SelectListItem{ Text="2023",Value="2025"},
+                    new SelectListItem{ Text="2023",Value="2026"}
+                };
+
+                
+            }
+
+            <div class="row m-1 p-1">
+
+                <div class="col-2 m-1"><label asp-for="year"></label></div>
+                <div class="col-3 m-1"><select asp-for="year" asp-items="year" class="dropdown w-100"></select></div>
+                <div class="col-2 m-1"> <label asp-for="Degination"></label>  </div>
+                <div class="col-3 m-1"><select asp-for="Degination" asp-items="@(new SelectList(@Model.LstDegination,"Id","DeginationName"))" class="dropdown w-100"></select></div>
+                <div class="col-2 m-1"> <label asp-for="@Model.DeptID"></label>  </div>
+                <div class="col-3 m-1"><select asp-for="@Model.DeptID" asp-items="@(new SelectList(@Model.lstdepartment,"Id","DeptName"))" class="dropdown w-100"></select></div>
+               
+                <div class="justify-content-lg-center"> <input type="submit" value="Show Question" class="btn btn-sm btn-outline-success m-2 p-2" /> </div>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <div class="container  border border-primary col-6 m-2 p-2 align-self-center">
+
+        <form asp-action="setassementQuestion">
+
+            <div class="table">
+
+                @if (Model.LstScoreCards != null)
+                {
+                    <table class="table table-responsive justify-content-center table-bordered ">
+                        <tr>
+                            <th>User ID</th>
+                            <th>Emp ID</th>
+                            <th>Name</th>
+                            <th>Feedback Score(%)</th>
+                            <th>Assesment Score(%)</th>
+                            <th>Agrigated Score(%)</th>
+                        </tr>
+
+                        @foreach (var item in Model.LstScoreCards)
+                        {
+
+                            <tr>
+                                
+                                <td> @item.UserID</td>
+                                <td> @item.EmpID</td>
+                                <td> @item.Name</td>
+                                <td> @item.F_Score</td>
+                                <td> @item.A_Score</td>
+                                <td> @item.AggrScore</td>
+                               
+                            </tr>
+     
+                        }
+
+                    </table>
+
+
+                }
+
+                else
+                {
+                    <p>No Records To Show</p>
+                }
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>

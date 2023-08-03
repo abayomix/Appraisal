@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Repo_PMS.Models.assesment>
+
+
+
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Feedbacks</title>
+</head>
+<body>
+
+<h4> All Feedbacks</h4>
+<hr />
+<div class="container justify-content-center col-6">
+    
+    
+
+        
+        @if(Model !=null)
+        
+        {
+
+                foreach(var item in Model)
+                {
+                <form method="post" asp-action="GiveAssesment">
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                             <h5 class="card-title">@item.AssessmentName</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@item.AssessmentCAtegory For Year @item.AssessmentYear</h6>
+                            <p class="card-text">@item.A_Description</p>
+                            
+                            <input type="hidden" Name="ASID" value="@item.Id"/>
+                            <input type="hidden" Name="EMPID" value="@HttpContextAccessor?.HttpContext?.Session?.GetString("EmpID")?.ToString()"/>
+                            <input type="hidden" Name="AssesmentName" value="@item.AssessmentName"/>
+
+                            <input type="submit" class="btn btn-primary" value="Give Assesment"/>
+                            
+                      
+                        </div>
+                    </div>
+                </div>
+
+                </form>
+
+
+
+
+
+
+
+            }    
+
+
+
+
+
+        }
+       
+   
+</div>
+
+
+</body>
+</html>

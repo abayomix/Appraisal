@@ -1,0 +1,17 @@
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Business_PMS.deps.json
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Business_PMS.dll
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Business_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Repo_PMS.dll
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Utility_PMS.dll
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Repo_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Business_PMS\bin\Debug\net6.0\Utility_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.csproj.AssemblyReference.cache
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.AssemblyInfoInputs.cache
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.AssemblyInfo.cs
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.csproj.CoreCompileInputs.cache
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.csproj.CopyComplete
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.dll
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\refint\Business_PMS.dll
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\Business_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Business_PMS\obj\Debug\net6.0\ref\Business_PMS.dll

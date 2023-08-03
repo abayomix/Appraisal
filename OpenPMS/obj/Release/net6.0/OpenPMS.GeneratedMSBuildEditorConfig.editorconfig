@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = OpenPMS
+build_property.RootNamespace = OpenPMS
+build_property.ProjectDir = C:\Users\USER\OneDrive\Desktop\PerformanceManagement\OpenPMS\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\USER\OneDrive\Desktop\PerformanceManagement\OpenPMS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/AddAssesment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQXNzZXNtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/AddDegination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRGVnaW5hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/addDept.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYWRkRGVwdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/Addreview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkcmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/EditAssesment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFzc2VzbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/EditReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFJldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Admin/ViewScore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1Njb3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Assesment/AddQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNtZW50XEFkZFF1ZXN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Assesment/Assesments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNtZW50XEFzc2VzbWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Assesment/EditQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNtZW50XEVkaXRRdWVzdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Assesment/GiveAssesment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNtZW50XEdpdmVBc3Nlc21lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Assesment/setassementQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNtZW50XHNldGFzc2VtZW50UXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Assesment/ViewAllQuestions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNtZW50XFZpZXdBbGxRdWVzdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Feedback/AddFeedbackQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcQWRkRmVlZGJhY2tRdWVzdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Feedback/Feedbacks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcRmVlZGJhY2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Feedback/GetReportees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcR2V0UmVwb3J0ZWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Feedback/RecordFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcUmVjb3JkRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Feedback/UpdateQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcVXBkYXRlUXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/LogIn/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/LogIn/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Shared/useradminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJhZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/OneDrive/Desktop/PerformanceManagement/OpenPMS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

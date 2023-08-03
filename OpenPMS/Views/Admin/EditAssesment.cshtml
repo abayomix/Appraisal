@@ -1,0 +1,101 @@
+﻿@model Repo_PMS.Models.VMassesment
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Assesment</title>
+</head>
+<body>
+
+    <h4>Edit Assesment</h4>
+    <hr />
+    <div class="container justify-content-center col-6">
+        <div class="col-md-4">
+            <form asp-action="EditAssesment">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="assesment.Id" class="control-label"></label>
+                    <input asp-for="assesment.Id" class="form-control" readonly />
+                    <span asp-validation-for="assesment.Id" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="assesment.AssessmentName" class="control-label"></label>
+                    <input asp-for="assesment.AssessmentName" class="form-control" />
+                    <span asp-validation-for="assesment.AssessmentName" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group">
+
+                    @{
+                        var years = new List<SelectListItem>
+                    {
+                    new SelectListItem{Text="2023",Value="2023"}
+                    ,new SelectListItem{Text="2024",Value="2024"}
+                    ,new SelectListItem{Text="2025",Value="2025"}
+                    ,new SelectListItem{Text="2026",Value="2026"}
+                    ,new SelectListItem{Text="2027",Value="2027"}
+                    ,new SelectListItem{Text="2028",Value="2028"}
+                    ,new SelectListItem{Text="2029",Value="2029"}
+                    ,new SelectListItem{Text="2030",Value="2030"}
+                    ,new SelectListItem{Text="2031",Value="2031"}
+
+                    };
+                    }
+                    <label asp-for="assesment.AssessmentYear" class="control-label"></label>
+                    <select class="control-select" asp-for="assesment.AssessmentYear" asp-items="years"></select>
+
+                    <span asp-validation-for="assesment.AssessmentYear" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label asp-for="assesment.A_Description" class="control-label"></label>
+                    <input asp-for="assesment.A_Description" class="form-control" />
+                    <span asp-validation-for="assesment.A_Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+
+                    @{
+                        var reviewcategories = new List<SelectListItem>
+                    {
+                    new SelectListItem{Text="Mid Year",Value="Mid Year"}
+                    ,new SelectListItem{Text="Anual",Value="Anual"}
+
+                    };
+                    }
+                    <label asp-for="assesment.AssessmentCAtegory" class="control-label"></label>
+                    <select class="control-select" asp-for="assesment.AssessmentCAtegory" asp-items="reviewcategories"></select>
+
+                    <span asp-validation-for="assesment.AssessmentCAtegory" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="assesment.IsActive" /> @Html.DisplayNameFor(model => model.assesment.IsActive)
+                    </label>
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+</body>
+</html>

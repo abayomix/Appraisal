@@ -1,0 +1,81 @@
+﻿@model Repo_PMS.Models.VMFeedback
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddFeedbackQuestion</title>
+</head>
+<body>
+
+<h4>VMFeedback</h4>
+<hr />
+<div class="container justify-content-center col-6">
+    <div class="col-md-4">
+        <form asp-action="AddFeedbackQuestion">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                    <label asp-for="Question.Question" class="control-label"></label>
+                    <input asp-for="Question.Question" class="form-control" />
+                    <span asp-validation-for="Question.Question" class="text-danger"></span>
+                </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+ <div>
+        <H1>Current Feedback Questions</H1>
+
+        <table border="1">
+
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Question.Id)</th>
+                <th>@Html.DisplayNameFor(Model => Model.Question.Question)</th>
+                
+                <th>@Html.DisplayText("Operations")</th>
+            </tr>
+
+            @{
+                if (@Model.LstQuestions != null)
+                {
+
+                    foreach (var item in Model.LstQuestions)
+                    {
+                        <tr>
+
+
+                        
+                            <td>@item.Id</td>
+                            <td>@item.Question</td>
+                            
+                            <td>
+
+                                @Html.ActionLink("Edit","UpdateQuestion",new{id=item.Id}) |
+                                @Html.ActionLink("Delete","deleteQuestion",new{id=item.Id}) |
+
+                            </td>
+
+                        </tr>
+
+                    }
+
+                }
+
+            }
+
+        </table>
+
+
+
+    </div>
+
+</body>
+</html>

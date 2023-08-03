@@ -1,0 +1,118 @@
+﻿@model Repo_PMS.Models.VMsetassesmentQuestion
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>setassementQuestion</title>
+</head>
+<body>
+
+  <div class="container  border border-primary col-8 m-2 p-2 align-self-center">
+
+        <form method="post" asp-action="setassementQuestion">
+
+            @{
+
+                var year = Model.lstAssements.Select(A => new SelectListItem { Text = A.AssessmentYear, Value = A.AssessmentYear }).Distinct().ToList();
+                var Category = Model.lstAssements.Select(A => new SelectListItem { Text = A.AssessmentCAtegory, Value = A.AssessmentCAtegory }).Distinct().ToList();
+
+            }
+
+            <div class="row m-1 p-1">
+
+                <div class="col-2 m-1"><label asp-for="Questionset.AssesmentYear"></label></div>
+                <div class="col-3 m-1"><select asp-for="Questionset.AssesmentYear" asp-items="year" class="dropdown w-100"></select></div>
+                <div class="col-2 m-1"> <label asp-for="Questionset.AssesmentCategory"></label>  </div>
+                <div class="col-3 m-1"><select asp-for="Questionset.AssesmentCategory" asp-items="Category" class="dropdown w-100"></select></div>
+                <div class="col-2 m-1"> <label asp-for="Questionset.Deg"></label>  </div>
+                <div class="col-3 m-1"><select asp-for="Questionset.Deg" asp-items="@(new SelectList(@Model.deginations,"Id","DeginationName"))" class="dropdown w-100"></select></div>
+                <div class="col-2 m-1"> <label asp-for="Questionset.Dept"></label>  </div>
+                <div class="col-3 m-1"><select asp-for="Questionset.Dept" asp-items="@(new SelectList(@Model.departments,"Id","DeptName"))" class="dropdown w-100"></select></div>
+                 <div class="col-2 m-1"> <label asp-for="Questionset.AssesmentID"></label>  </div>
+                <div class="col-3 m-1"><select asp-for="Questionset.AssesmentID" asp-items="@(new SelectList(@Model.lstAssements,"Id","AssessmentName"))" class="dropdown w-100"></select></div>
+
+                <div class="justify-content-lg-center"> <input type="submit" value="Show Question" class="btn btn-sm btn-outline-success m-2 p-2" /> </div>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <div class="container  border border-primary col-6 m-2 p-2 align-self-center">
+
+        <form asp-action="setassementQuestion">
+
+
+           
+
+            <div class="table">
+
+                @if (Model.questions != null)
+                {
+                    int indexing = 0;
+
+              <input type="hidden" asp-for="Questionset.AssesmentYear" vlaue="@Model.Questionset.AssesmentYear" />
+             <input type="hidden" asp-for="Questionset.AssesmentCategory" vlaue="@Model.Questionset.AssesmentCategory" />
+              <input type="hidden" asp-for="Questionset.Deg" vlaue="@Model.Questionset.Deg" />
+               <input type="hidden" asp-for="Questionset.Dept" vlaue="@Model.Questionset.Dept" />
+                <input type="hidden" asp-for="Questionset.AssesmentID" vlaue="@Model.Questionset.AssesmentID" />
+                <input type="hidden" asp-for="Questionset.AssesmentID" vlaue="@Model.Questionset.AssesmentID" />
+
+                <input type="hidden" asp-for="Questionset.CreatedBy"  value="@HttpContextAccessor?.HttpContext?.Session?.GetString("EmpID")?.ToString()"/>
+
+                    <table class="table table-responsive justify-content-center table-bordered ">
+                        <tr>
+                            <th>Select</th>
+                            <th>Question</th>
+                        </tr>
+
+                        @foreach (var item in Model.questions)
+                        {
+
+                            <tr>
+                                <td> <input type="checkbox" asp-for="questions[indexing].selected" /> </td>
+                                <td> @item.Question_Text</td>
+                                <input type="hidden" asp-for="questions[indexing].Qid" value="@item.Qid" />
+
+
+                            </tr>
+
+
+                            indexing++;
+                        }
+
+
+
+
+
+
+
+
+
+                    </table>
+
+
+                    <input type="submit" value="Save" class="btn btn-primary align-self-center" />
+
+                }
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>

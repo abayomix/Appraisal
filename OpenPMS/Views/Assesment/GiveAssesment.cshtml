@@ -1,0 +1,70 @@
+﻿@model Repo_PMS.Models.VMrecordAssesment
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SaveAssesmentResponse</title>
+</head>
+<body>
+
+    @if(@Model.Question.Qid > 0)
+    {
+        int remaining =  Model.NumberOfQuestion - Model.QuestionNo;
+        string Btn_text;
+        
+        
+        if(remaining >1)
+        
+        {
+            Btn_text = "Next";
+        }
+        else
+        {
+            Btn_text = "Submit";
+        }
+
+        <form method="post" asp-action="SaveAssesmentResponse">
+
+        <div class="card">
+            <div class="card-header">
+                <h5> @Model.AssesmentName </h5>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.Question.Question_Text</h5>
+               
+                
+                <p class="card-text">@Html.RadioButtonFor(@Model=> Model.AR.AnswerResponse ,'1') @Html.DisplayTextFor(@Model=>Model.Question.option_1)</p>
+
+                 <p class="card-text">@Html.RadioButtonFor(@Model=> Model.AR.AnswerResponse,'2') @Html.DisplayTextFor(@Model=>Model.Question.option_2)</p>
+                  <p class="card-text">@Html.RadioButtonFor(@Model=> Model.AR.AnswerResponse,'3') @Html.DisplayTextFor(@Model=>Model.Question.option_3)</p>
+                   <p class="card-text">@Html.RadioButtonFor(@Model=> Model.AR.AnswerResponse,'4') @Html.DisplayTextFor(@Model=>Model.Question.option_4)</p>
+                
+                
+                    <input type="submit" value="@Btn_text" class="btn btn-primary">
+                
+                             <input type="hidden" asp-for="@Model.ASID" value="@Model.ASID"/>
+                             <input type="hidden" asp-for="@Model.EMPID" value="@HttpContextAccessor?.HttpContext?.Session?.GetString("EmpID")?.ToString()"/>
+                             <input type="hidden" asp-for="@Model.AssesmentName" value="@Model.AssesmentName"/>
+                             <input type="hidden" asp-for="@Model.AR.QID" value="@Model.Question.Qid"/>
+                            <input type="hidden" asp-for="@Model.NumberOfQuestion" value="@Model.NumberOfQuestion"/>
+                            <input type="hidden" asp-for="@Model.QuestionNo" value="@Model.QuestionNo"/>
+            </div>
+        </div>
+
+
+        </form>
+
+
+
+    }
+
+
+
+
+</body>
+</html>

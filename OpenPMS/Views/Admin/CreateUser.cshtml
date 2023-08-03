@@ -1,0 +1,87 @@
+﻿@model Repo_PMS.Models.UserRegistrationVM
+
+ 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create User</title>
+</head>
+<body>
+
+
+
+<div class="container justify-content-center col-6">
+    
+        <form asp-action="CreateUser">
+
+            <h4>User Registration</h4>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table>
+                <tr>
+          <td>  @Html.DisplayNameFor(model=> model.UserDetail.UserID)</td>
+           <td> <input type="text" asp-for="UserDetail.UserID" /> </td>
+            </tr>
+            <tr>
+             <td>@Html.DisplayNameFor(model=> model.UserDetail.Name)</td>
+            <td><input type="text" asp-for="UserDetail.Name" /></td>
+            </tr>
+            <tr>
+            <td> @Html.DisplayNameFor(model=> model.UserDetail.EmpID)</td>
+            <td><input type="text" asp-for="UserDetail.EmpID" /></td>
+            </tr>
+            <tr>
+             <td>@Html.DisplayNameFor(model=> model.UserDetail.Email)</td>
+            <td><input type="text" asp-for="UserDetail.Email" /></td>
+            </tr>
+            <tr>
+
+            <td>@Html.DisplayNameFor(model=> model.UserDetail.RoleID)</td>
+            <td><select class="form-select" asp-for="@Model.UserDetail.RoleID" asp-items="@(new SelectList(Model.LstRoles,"RoleId","RoleName"))" aria-label="Select Role"> </select>
+            
+            </td></tr>
+
+             <tr>
+
+            <td>@Html.DisplayNameFor(model=> model.UserDetail.DeptID)</td>
+            <td><select class="form-select" asp-for="@Model.UserDetail.DeptID" asp-items="@(new SelectList(Model.Departments,"Id","DeptName"))" aria-label="Select Role"> </select>
+            
+            </td></tr>
+            <tr>
+            <td>@Html.DisplayNameFor(model=> model.UserDetail.DeginationID)</td>
+            <td><select class="form-select"  asp-for="@Model.UserDetail.DeginationID" asp-items="@(new SelectList(Model.Deginations,"Id","DeginationName"))" aria-label="Select Role"> </select>
+            
+            </td></tr>
+
+
+               <tr>
+            <td>@Html.DisplayNameFor(model=> model.UserDetail.ManagerID)</td>
+            <td><select  class="form-select" asp-for="@Model.UserDetail.ManagerID" asp-items="@(new SelectList(Model.users,"EmpID","EmpName"))" aria-label="Select Role"> </select>
+            
+            </td></tr>
+
+
+            
+
+
+            <tr>
+           <td colspan="2"> @Html.DisplayNameFor(model=> model.UserDetail.IsActive)
+            <input type="checkbox" asp-for="UserDetail.IsActive" /></td>
+            </tr>
+            </table>
+            <input name="btn_click" type="submit" value="Save To OPMS" class="btn btn-primary"/>
+             @*<input name="btn_click" type="submit" value="Save To API" class="btn btn-primary"/> *@
+
+
+
+           
+        </form>
+    </div>
+
+ 
+
+
+</body>
+</html>

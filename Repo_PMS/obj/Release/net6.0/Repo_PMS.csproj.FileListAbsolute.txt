@@ -1,0 +1,34 @@
+D:\OpenPms --Local\OpenPMS\Repo_PMS\bin\Release\net6.0\Repo_PMS.deps.json
+D:\OpenPms --Local\OpenPMS\Repo_PMS\bin\Release\net6.0\Repo_PMS.runtimeconfig.json
+D:\OpenPms --Local\OpenPMS\Repo_PMS\bin\Release\net6.0\Repo_PMS.dll
+D:\OpenPms --Local\OpenPMS\Repo_PMS\bin\Release\net6.0\Repo_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Repo_PMS\bin\Release\net6.0\Utility_PMS.dll
+D:\OpenPms --Local\OpenPMS\Repo_PMS\bin\Release\net6.0\Utility_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.csproj.AssemblyReference.cache
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.AssemblyInfoInputs.cache
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.AssemblyInfo.cs
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.csproj.CoreCompileInputs.cache
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.csproj.CopyComplete
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.dll
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\refint\Repo_PMS.dll
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.pdb
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\Repo_PMS.genruntimeconfig.cache
+D:\OpenPms --Local\OpenPMS\Repo_PMS\obj\Release\net6.0\ref\Repo_PMS.dll
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\bin\Release\net6.0\Repo_PMS.deps.json
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\bin\Release\net6.0\Repo_PMS.runtimeconfig.json
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\bin\Release\net6.0\Repo_PMS.dll
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\bin\Release\net6.0\Repo_PMS.pdb
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\bin\Release\net6.0\Utility_PMS.dll
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\bin\Release\net6.0\Utility_PMS.pdb
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.csproj.AssemblyReference.cache
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.AssemblyInfoInputs.cache
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.AssemblyInfo.cs
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.csproj.CopyComplete
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.dll
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\refint\Repo_PMS.dll
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.pdb
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\Repo_PMS.genruntimeconfig.cache
+C:\Users\USER\OneDrive\Desktop\PerformanceManagement\Repo_PMS\obj\Release\net6.0\ref\Repo_PMS.dll

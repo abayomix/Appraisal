@@ -1,0 +1,80 @@
+﻿@model Repo_PMS.Models.VMAssesmentQuestion
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewAllQuestions</title>
+</head>
+<body>
+
+ <div>
+        <H1>All Question</H1>
+
+        <table class="table-responsive table table-hover " >
+
+            <tr>
+                <th>QID</th>
+                <th>Question</th>
+                <th>Option-1</th>
+                <th>Option-2</th>
+                <th>Option-3</th>
+                <th>Option-4</th>
+                <th>Answer</th>
+                <th>Department</th>
+                <th>Degination</th>
+            </tr>
+
+            @{
+                if (@Model.questions != null)
+                {
+
+                    foreach (var item in Model.questions)
+                    {
+                                <tr>
+
+
+                                    
+
+
+                                       
+
+                                        <td>@item.Qid</td>
+                                        <td class="fs-6" >@item.Question_Text</td>
+                                        <td>@item.option_1</td>
+                                        <td>@item.option_2</td>
+                                        <td>@item.option_3</td>
+                                        <td>@item.option_4</td>
+                                        <td>@item.Correct</td>
+                                        <td>@Model.DepartmentList.FirstOrDefault(Dept => Dept.Id == item.DeptID).DeptName.ToString() </td>
+                                        <td>@Model.DeginationsList.FirstOrDefault(Deg => Deg.Id==item.DegID).DeginationName.ToString()</td>
+                                        
+                                       
+                                        <td>
+
+                                            @Html.ActionLink("Edit","EditQuestion",new{id=item.Qid}) |
+                                            @Html.ActionLink("Delete","DeleteQuestion",new{id=item.Qid}) |
+                                            
+
+                                        </td>
+
+                                    </tr>
+
+                    }
+
+
+
+                }
+
+            }
+
+        </table>
+
+
+
+    </div>
+</body>
+</html>
